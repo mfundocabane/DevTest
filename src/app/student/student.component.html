@@ -1,0 +1,80 @@
+<div class="panel panel-primary" *ngFor="let student of students">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{student.name}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="col-xs-10">
+      <div class="row">
+        <div class="col-xs-4">
+          <img class="imageClass" [src]="student.photoPath"/>
+        </div>
+        <div class="col-xs-8">
+            <div class="row">
+              <div class="col-xs-6">
+                Surname
+              </div>
+              <div class="col-xs-6">
+                : {{student.surname}}
+                </div>
+            </div>
+           <div class="row">
+              <div class="col-xs-6">
+                Gander
+              </div>
+              <div class="col-xs-6">
+                : {{student.gander}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                  Email
+                </div>
+                <div class="col-xs-6">
+                  : {{student.email}}
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-xs-6">
+                    Phone Number
+                  </div>
+                  <div class="col-xs-6">
+                  : {{student.phoneNumber}}
+                    </div>
+              </div>
+              <div class="row">
+                  <div class="col-xs-6">
+                   Contact Preference
+                  </div>
+                  <div class="col-xs-6">
+                  : {{student.contactPreference}}
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-xs-6">
+                   Date of Birth
+                   </div>
+                  <div class="col-xs-6">
+                   : {{student.dateOfBirth| date }}
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-xs-6">
+                    Department
+                    </div>
+                    <div class="col-xs-6">
+                  : {{student.department}}
+                    </div>
+              </div>
+              <div class="row">
+                    <div class="col-xs-6">
+                    IsActive
+                    </div>
+                    <div class="col-xs-6">
+                      : {{student.isActive}}
+                    </div>
+              </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
