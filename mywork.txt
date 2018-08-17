@@ -1,0 +1,58 @@
+Create Database Student_Info;
+
+CREATE TABLE Student (
+
+IDNumber int IDENTITY(1,1) PRIMARY KEY,
+FullName nvarchar(50),
+Surname nchar(10),
+GenderID int,
+Email nvarchar(50),
+PhoneNumber nvarchar(20),
+ContactPreference int,
+Photopath nvarchar(MAX),
+DepartmentID int,
+FOREIGN KEY (GenderID) REFERENCES Gender(GenderID)
+FOREIGN KEY (ContactPreference) REFERENCES ContactPreference(ContactPreference)
+FOREIGN KEY (DepartmentID) REFERENCES Department(DepartmentID)
+
+);
+
+CREATE TABLE Department (
+
+DepartmentID int IDENTITY(1,1) PRIMARY KEY,
+Name nvarchar(50)
+
+);
+
+CREATE TABLE Gender (
+
+GenderID int IDENTITY(1,1) PRIMARY KEY,
+Description nchar(10)
+
+);
+
+CREATE TABLE ContactPreference (
+
+ContactPreference int IDENTITY(1,1) PRIMARY KEY,
+Description nvarchar(50)
+
+);
+
+
+------------------------------------------------------------------------------------------------------------ 
+
+INSERT INTO Student 
+(FullName,Surname,GenderID,Email,PhoneNumber,ContactPreference,Photopath,DepartmentID )
+VALUES('Anele','Miza',1,'mfundocabane@gmail.com','0739144868','Email',3);
+
+
+INSERT INTO Department 
+(Name)
+VALUES('Production');
+
+INSERT INTO Gender(Description)
+VALUES ('Female');
+
+INSERT INTO ContactPreference(Description)
+VALUES ('Email');
+
